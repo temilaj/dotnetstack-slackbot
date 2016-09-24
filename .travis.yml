@@ -1,5 +1,7 @@
 language: csharp
 solution: dotnetstack-slackbot.sln
+mono:
+  - 4.0.2.0
 install:
   - nuget restore dotnetstack-slackbot.sln
   - sudo apt-get install gtk-sharp2
