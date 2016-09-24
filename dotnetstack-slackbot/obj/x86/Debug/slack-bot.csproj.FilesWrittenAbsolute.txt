@@ -1,5 +1,0 @@
-/home/bolorundurowb/Documents/XamarinProjects/slack-bot/slack-bot/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/bolorundurowb/Documents/XamarinProjects/slack-bot/slack-bot/bin/Debug/slack-bot.exe.mdb
-/home/bolorundurowb/Documents/XamarinProjects/slack-bot/slack-bot/bin/Debug/slack-bot.exe
-/home/bolorundurowb/Documents/XamarinProjects/slack-bot/slack-bot/obj/x86/Debug/slack-bot.exe
-/home/bolorundurowb/Documents/XamarinProjects/slack-bot/slack-bot/obj/x86/Debug/slack-bot.exe.mdb

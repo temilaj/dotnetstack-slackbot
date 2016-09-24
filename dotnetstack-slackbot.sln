@@ -3,12 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetstack-slackbot", "dotnetstack-slackbot\dotnetstack-slackbot.csproj", "{F60D8820-4644-4ED0-AC15-5662E194DF68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetstack-slackbot-Tests", "dotnetstack-slackbot-Tests\dotnetstack-slackbot-Tests.csproj", "{45EB9737-6281-49F0-A2C8-7488259E759A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45EB9737-6281-49F0-A2C8-7488259E759A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45EB9737-6281-49F0-A2C8-7488259E759A}.Debug|x86.Build.0 = Debug|Any CPU
+		{45EB9737-6281-49F0-A2C8-7488259E759A}.Release|x86.ActiveCfg = Release|Any CPU
+		{45EB9737-6281-49F0-A2C8-7488259E759A}.Release|x86.Build.0 = Release|Any CPU
 		{F60D8820-4644-4ED0-AC15-5662E194DF68}.Debug|x86.ActiveCfg = Debug|x86
 		{F60D8820-4644-4ED0-AC15-5662E194DF68}.Debug|x86.Build.0 = Debug|x86
 		{F60D8820-4644-4ED0-AC15-5662E194DF68}.Release|x86.ActiveCfg = Release|x86
