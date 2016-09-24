@@ -5,7 +5,6 @@ mono:
 install:
   - nuget restore dotnetstack-slackbot.sln
   - sudo apt-get install gtk-sharp2
-  - sudo apt-get install mono-2.0
   - curl -sS https://api.nuget.org/packages/mono.cecil.0.9.6.4.nupkg > /tmp/mono.cecil.0.9.6.4.nupkg.zip
   - unzip /tmp/mono.cecil.0.9.6.4.nupkg.zip -d /tmp/cecil
   - cp /tmp/cecil/lib/net45/Mono.Cecil.dll .
