@@ -1,5 +1,5 @@
 ﻿//
-// Program.cs
+// SlackClient.cs
 //
 // Author:
 //       Bolorunduro Winner-Timothy <ogatimo@gmail.com>
@@ -23,14 +23,48 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+using System.Collections.Specialized;
+using System.Runtime.Remoting.Lifetime;
 using System;
+using System.Text;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace slackbot
 {
-	public class Program
+	public class SlackClient
 	{
-		public static void Main ()
+		private readonly Uri uri;
+		private readonly Encoding encoding = new UTF8Encoding();
+
+		public SlackClient (string urlWithAccessToken)
 		{
+			uri = new Uri (urlWithAccessToken);
+		}
+
+		public string PostMessage(string text, string username = null, string channel = null)
+		{
+			Payload payload = new Payload () {
+				Channel = channel,
+				Username = username,
+				Text = text
+			};
+
+			return PostMessage (payload);
+		}
+
+		public string PostMessage(Payload payload)
+		{
+			string payloadJson = JsonConvert.SerializeObject (payload);
+
+			using (WebClient webClient = new WebClient ()) {
+				NameValueCollection data = new NameValueCollection ();
+				data ["payload"] = payloadJson;
+
+				var response = webClient.UploadValues (uri, "POST", data);
+
+				return encoding.GetString (response);
+			}
 		}
 	}
 }

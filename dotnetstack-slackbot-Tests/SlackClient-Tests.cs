@@ -1,5 +1,5 @@
 ﻿//
-// Program.cs
+// Test.cs
 //
 // Author:
 //       Bolorunduro Winner-Timothy <ogatimo@gmail.com>
@@ -23,14 +23,22 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+using NUnit.Framework;
 using System;
+using slackbot;
 
-namespace slackbot
+namespace dotnetstackslackbotTests
 {
-	public class Program
+	[TestFixture ()]
+	public class SlackClientTests
 	{
-		public static void Main ()
+		[Test ()]
+		public void TestPostMessage ()
 		{
+			string url = "https://hooks.slack.com/services/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";
+			SlackClient client = new SlackClient (url);
+			string response = client.PostMessage ("Test from the C# bot, yeah!!!. @channel", "winner-bot", "#random");
+			Assert.AreEqual (response, "ok");
 		}
 	}
 }

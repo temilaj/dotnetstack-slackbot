@@ -1,5 +1,5 @@
 ﻿//
-// Test.cs
+// Payload.cs
 //
 // Author:
 //       Bolorunduro Winner-Timothy <ogatimo@gmail.com>
@@ -22,20 +22,21 @@
 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-using NUnit.Framework;
-using System;
+                // THE SOFTWARE.
+using Newtonsoft.Json;
 
-namespace dotnetstackslackbotTests
+namespace slackbot
 {
-	[TestFixture ()]
-	public class Test
+	public class Payload
 	{
-		[Test ()]
-		public void TestCase ()
-		{
-			Assert.IsTrue (true);
-		}
+		[JsonProperty("channel")]
+		public string Channel { get; set; }
+
+		[JsonProperty("username")]
+		public string Username { get; set; }
+
+		[JsonProperty("text")]
+		public string Text { get; set; }
 	}
 }
 
